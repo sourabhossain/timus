@@ -2,21 +2,10 @@
 
 int main()
 {
-    int n, sum = 0;
+    int n;
 
-    scanf("%d", &n);
-
-    if(n <= 0) {
-        for(int i = 1; i >= n; i--) {
-            sum += i;
-        }
-    }
-    else {
-        for(int i = 1; i <= n; i++) {
-            sum += i;
-        }
-    }
-    printf("%d\n", sum);
+	scanf("%d", &n);
+	printf("%d\n", (n > 0)? n * (n + 1) / 2 : 1 + n * (1 - n) / 2);
 
     return 0;
 }
